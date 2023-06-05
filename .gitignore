@@ -5,6 +5,7 @@ __pycache__
 .ipynb_checkpoints
 .pylintrc
 **/data/**
+**/Data/**
 **/scratch/**
 **/tilt_compile/**
 tools/thresh/*
