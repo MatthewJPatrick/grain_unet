@@ -1,0 +1,14 @@
+*.hdf5
+*.swp
+.DS_Store
+__pycache__
+.ipynb_checkpoints
+.pylintrc
+**/data/**
+**/scratch/**
+**/tilt_compile/**
+tools/thresh/*
+venv/
+hdf5_dump
+**.h5
+**/desktop.ini
