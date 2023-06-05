@@ -18,6 +18,7 @@ def import_data(directory):
     print(f"Found {len(input_names)} samples and {len(label_names)} tracings")
 
     return (input_names, label_names)
+
 def train_seq(input_names, label_names, save_name):
 
     #directory is the path where your images are located. Enter in a format like 'Data/train_nouveaux_256'
