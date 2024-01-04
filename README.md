@@ -24,6 +24,5 @@ The approach in this repository is paired with data at
   Nano Initiative Electron Microscopy Lab. (2023). Automated Grain Boundary Detection via U-Net: Images (Version 1.0) 
   [Data set]. Redivis. https://doi.org/10.57783/w6n3-5b02
 
-This is part of the work submitted to Microscopy and Microanalysis in June of 2023
-  M.J Patrick, J.K. Eckstein, J. R. Lopez, S. Toderas, J.M. Rickman, S. Levine, K. Barmak.  “Automated Grain Boundary Detection in Bright-Field 
-  Transmission Electron Microscopy Images via U-Net”, Microscopy and Microanalysis, Submitted (2023).
+This is part of the work published in Microscopy and Microanalysis:
+  [1] Matthew J Patrick, James K Eckstein, Javier R Lopez, Silvia Toderas, Sarah A Asher, Sylvia I Whang, Stacey Levine, Jeffrey M Rickman, Katayun Barmak, Automated Grain Boundary Detection for Bright-Field Transmission     Electron Microscopy Images via U-Net, Microscopy and Microanalysis, Volume 29, Issue 6, December 2023, Pages 1968–1979, https://doi.org/10.1093/micmic/ozad115
