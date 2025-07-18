@@ -76,39 +76,46 @@ This project uses a simple .ini format for its configuration file, allowing for 
 An example configuration file is shown here
 
 ```ini
-#Your configuration file
-#Make sure to name your file 'MyUnetConfig.ini'
-;You can also do comments like this 
 [PATH]
-IMAGE_PATH = C:/Your/Image/Path/With/Out/Spaces/Here
-LABEL_PATH = D:/path
-MODEL_PARAMS = 
+IMAGE_PATH = /path/to/images-for-training
+LABEL_PATH = /path/to/labels-for-training
+#Beware, this parameter is for both training and for inference... 
+MODEL_PARAMS = /path/to/weights.pth
 
 #These parameters are ~1:1 from the original paper
 [TRAINING_PARAMS]
 BATCH_SIZE = 5 
 EPOCHS = 80
-NUM_WORKERS = 0 #determines the amount of cores assigned to training
+#determines the amount of cores assigned to training
+NUM_WORKERS = 0 
 LEARNING_RATE = 0.0001
-SAVING_RATE = 50 #stores checkpoints of your model 
+#stores checkpoints of your model 
+SAVING_RATE = 50 
+
+#for advanced use only:
+PRETRAINED_WEIGHTS = 
+CUSTOM_LOSS_FUNCTION = 
 
 #These are recommended parameters
 [DATA_PARAMS]
-AUGMENT_ACTIVE = True 
+AUGMENT_ACTIVE = 1
 TRAINING_SPLIT = 0.9
 
 [INFERENCE_PARAMS]
-INFERENCE = True
-N_TEST_DATA_DIR = A:/path/for/automated/inferencing/input/images
-N_TEST_PATTERN = *.png
-OUTPUT_RESOLUTION = 512 #images should be square 
-OVERLAY_DATA_DIR =  D:/put/images/that/already/have/been/inferenced/for/post_processing
+INFERENCE = 1
+N_TEST_DATA_DIR = ./images
+N_TEST_PATTERN = /pattern/to/folders/*.png
+#images should be square 
+OUTPUT_RESOLUTION = 512 
+OVERLAY_DATA_DIR =  /where/to/put
+FINAL_OUTPUT_DIR =  /where/to/put
 
 #These are parameters for adjusting the output segmentation post-processing
+#Use 1 for true and 0 or blank for false. Tune using your judgement, or optimize in an intelligent way... Up to you.
 [POST_PROCESS]
-POST_PROCESS = False
+POST_PROCESS = 1
 COMPILATION = min
-N_DILATOINS = 3
+N_DILATIONS = 3
 LIBERAL_THRESHOLD = 161
 CONSERVATIVE_THRESHOLD = 212 
 INVERT_DOUBLE_THRESHOLD = True
